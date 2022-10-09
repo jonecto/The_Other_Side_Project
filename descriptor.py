@@ -13,7 +13,7 @@ class Descriptor():
     def __init__(self):
         self.X=[0,1,2]
         self.Y=[0,1,2]
-        self.pieces=['Peon','Ficha','Rey']
+        self.pieces=['Peon','Ficha']
         self.turns=[0,1,2]
  
     def code(self, n_args):
