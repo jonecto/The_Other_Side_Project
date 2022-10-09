@@ -96,7 +96,7 @@ class the_other_side():
             for y in range(2):
                 ot2=[]
                 mod2=[]
-                for x in range(3):
+                for x in [1,2]:
                     if y==0:
                         mod2=f"(({self.letras.code([0,1,0,t])}Y{self.letras.code([1,0,1,t])})>{self.letras.code([0,0,1,t+1])}))"
                         ot2.append(mod2)
