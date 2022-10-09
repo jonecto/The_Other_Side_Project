@@ -37,7 +37,33 @@ class the_other_side():
         return descriptor.Ytoria(otf)
     def rule_2(self):
         #El peon solo puede ocupar una casilla por turno
-        a=12
+        otf=[]
+        modf=""
+        for t in range(3):
+            ot1=[]
+            mod1=""
+            for y in range(3):
+                ot2=[]
+                mod2=""
+                for x in range(3):
+                    ot3=[]
+                    mod3=""
+                    for p in range(2):
+                        mod3 = f"({self.letras.code([p,x,y,t])}>"
+                        ot4=[]
+                        mod4=""
+                        for m in range(3):
+                            for n in range (3):
+                                if m!=x or n!= y:
+                                    mod4=f"-{self.letras.code([p,m,n,t])}"
+                                    ot4.append(mod4)
+                        mod3+=descriptor.Ytoria(ot4)+")"
+                        ot2.append(mod3)
+                mod1=descriptor.Ytoria(ot2)
+                ot1.append(mod1)
+            modf=descriptor.Ytoria(ot1)
+            otf.append(modf)
+        return descriptor.Ytoria(otf)
     def rule_3(self):
         #Si la casilla de enfrente no está ocupada, al siguiente turno el peon la ocupa
         a=12
@@ -66,9 +92,15 @@ def see_fine(var):
 
 
 T_O_S= the_other_side()
+print("Regla 1:")
 print(T_O_S.rule_1())
+print("Regla 2:")
 print(T_O_S.rule_2())
+print("Regla 3:")
 print(T_O_S.rule_3())
+print("Regla 4:")
 print(T_O_S.rule_4())
+print("Regla 5:")
 print(T_O_S.rule_5())
+print("Regla 6:")
 print(T_O_S.rule_6())
