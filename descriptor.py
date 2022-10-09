@@ -5,17 +5,15 @@
         Decodificador
         Letra
         
-        
-
 '''
 
 class Descriptor():
     def __init__(self):
         self.X=[0,1,2]
         self.Y=[0,1,2]
-        self.pieces=['Peon','Ficha']
+        self.pieces=['Peon','Obstaculo']
         self.turns=[0,1,2]
-#holaaaaa 
+
     def code(self, n_args):
         '''
          n_args recibe una lista con los argumentos (pieza,x,y,turno)
@@ -46,10 +44,10 @@ class Descriptor():
         '''
         z=self.decode(car) #Recibe los argumentos 
         if(z[0]==1): #identifica que tipo de pieza es
-            pieza="Ficha"
+            pieza="Obstaculo"
         else:
             pieza="Peon"
-        return f"[Hay {pieza} en la casilla ({z[1]},{z[2]}) en el turno {z[3]}]"
+        return f"[Hay un {pieza} en la casilla ({z[1]},{z[2]}) en el turno {z[3]}]"
 def Ytoria(lista_forms):
     form = ''
     inicial = True
@@ -86,11 +84,10 @@ def see_rule(cadena):
         else: #Si no pasa ninguna de esas, coloca el argumento común y corriente
             trad+=i
     return trad
-'''
 
 #Si quiere observar el funcionamiento de cada cosa, quite las comillas y corra el programa
-
-prueba = descriptor()
+'''
+prueba = Descriptor()
 rev=[]
 i=0
 print(prueba.code([0,0,0,0]))
