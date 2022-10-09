@@ -15,7 +15,7 @@ class Descriptor():
         self.Y=[0,1,2]
         self.pieces=['Peon','Ficha']
         self.turns=[0,1,2]
- 
+#holaaaaa 
     def code(self, n_args):
         '''
          n_args recibe una lista con los argumentos (pieza,x,y,turno)
