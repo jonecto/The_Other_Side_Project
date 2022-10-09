@@ -54,6 +54,7 @@ class the_other_side():
             rev.append(self.letras.code([0,i,2,2]))
         r6=descriptor.Otoria(rev)
         return r6
+    
 def see_fine(var):
     normal=0
     for i in var:
@@ -66,4 +67,8 @@ def see_fine(var):
 
 T_O_S= the_other_side()
 print(T_O_S.rule_1())
-print(see_fine(T_O_S.rule_1()))
+print(T_O_S.rule_2())
+print(T_O_S.rule_3())
+print(T_O_S.rule_4())
+print(T_O_S.rule_5())
+print(T_O_S.rule_6())
