@@ -151,8 +151,11 @@ def see_fine(var):
             normal=normal-1
     return normal
 
-
+des=descriptor.Descriptor()
 T_O_S= the_other_side()
+print(des.code([0,1,2,2]))
+print(des.code([1,1,1,2]))
+'''
 print("Regla 1:")
 print(descriptor.see_rule(T_O_S.rule_1()))
 print("Regla 2:")
@@ -164,4 +167,6 @@ print(descriptor.see_rule(T_O_S.rule_4()))
 print("Regla 5:")
 print(descriptor.see_rule(T_O_S.rule_5()))
 print("Regla 6:")
-print(descriptor.see_rule(T_O_S.rule_6()))
+print(descriptor.see_rule(T_O_S.rule_6()))'''
+#Ʀ
+#Ɲ
